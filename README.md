@@ -65,7 +65,7 @@ That command will run all yml files that are contained within that directory.
 That's it! Now just wait, and your tests will run.
 
 ## More Info and Docs
-See the full docs for the test scripts here:
+See the full docs for the test scripts here:  
 [https://github.com/bespoken/virtual-device-sdk/blob/master/docs/test_scripts.md](https://github.com/bespoken/virtual-device-sdk/blob/master/docs/test_scripts.md)
 
 ## Questions/Feedback? 
