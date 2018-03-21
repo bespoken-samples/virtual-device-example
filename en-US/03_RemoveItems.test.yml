@@ -17,7 +17,7 @@ config:
 
 # Sequence 01. Test scenario: Invoke intent, no further interaction
 "open bring and remove apples and oranges":
-  transcript: "ok i have removed apples and oranges"
+  transcript: "ok* i have removed apples and oranges"
 
 # Sequence 02. Test scenario: Invoke intent, one interaction
 "open bring": "welcome to bring how can i help"

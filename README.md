@@ -17,7 +17,10 @@ npm install virtual-device-sdk -g
 First, you need to get a token. See [here for instructions](https://github.com/bespoken/virtual-device-sdk/blob/master/docs/token_guide.md).
 
 ### Create a .env file:  
-This file contains the tokens for each locale and other important environment variables.
+This file contains the tokens for each locale and other important environment variables. We have included our .env file 
+in this repo so you can run the test scripts and see them in action. Our .env file contains our tokens. You should add
+yours when creating your own test scripts. 
+
 * Create a file ".env" in the folder where you are going to run the scripts or copy the example.env and save it as .env.
 * Add your tokens. By default, the token will be stored as:
 ```
@@ -58,3 +61,7 @@ bvd test-directory
 That command will run all yml files that are contained within that directory.
 
 That's it! Now just wait, and your tests will run.
+
+
+##Questions/Feedback? 
+Help is only a few clicks away. Have questions or feedback? Email us at [ivan@bespoken.io](mailto:ivan@bespoken.io) or [jpk@bespoken.io](mailto:jpk@bespoken.io) 

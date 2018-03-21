@@ -16,10 +16,10 @@ config:
   voiceID: Joey
   
 # Sequence 01. Test scenario: launch request, no further interaction
-"open bring": "welcome to bring how can i help"
+"open bring": "welcome to bring"
 
 # Sequence 02. Test scenario: launch request, one interaction (card not present in skill, just for demo purposes)
-"open bring": "welcome to bring how can i help"
+"open bring": "welcome to bring"
 "what is on my list":
   transcript:
     - "milk"
