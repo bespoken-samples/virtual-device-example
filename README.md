@@ -21,6 +21,8 @@ This file contains the tokens for each locale and other important environment va
 in this repo so you can run the test scripts and see them in action. Our .env file contains our tokens. You should add
 yours when creating your own test scripts. 
 
+**FYI - the included tokens are so that new users can get started quickly. However, they are common tokens and will NOT work as reliably as creating your own.** Please follow the steps above to create your own.
+
 * Create a file ".env" in the folder where you are going to run the scripts or copy the example.env and save it as .env.
 * Add your tokens. By default, the token will be stored as:
 ```
