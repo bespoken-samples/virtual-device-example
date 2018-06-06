@@ -14,7 +14,7 @@ Install the virtual-device-sdk to run the scripts. Open a command-line and run t
 npm install virtual-device-sdk -g
 ```
 ### Get your Virtual Device Token
-First, you need to get a token. See [here for instructions](https://github.com/bespoken/virtual-device-sdk/blob/master/docs/token_guide.md).
+First, you need to get a token. See [here for instructions](https://github.com/bespoken/virtual-device-sdk/blob/master/docs/setup.md).
 
 ### Create a .env file:  
 This file contains the tokens for each locale and other important environment variables. We have included our .env file 
