@@ -1,0 +1,38 @@
+#=====================================================================================================================
+#     ______    _ ____  ______        __  _
+#    / __/ /__ (_) / / /_  __/__ ___ / /_(_)__  ___ _
+#   _\ \/  '_// / / /   / / / -_|_-</ __/ / _ \/ _ `/
+#  /___/_/\_\/_/_/_/   /_/  \__/___/\__/_/_//_/\_, /
+#                                             /___/
+#
+# Created by Bespoken
+# Learn more at https://read.bespoken.io/unit-testing/getting-started/
+#
+# Skill name: "Bring! Shopping List" by Bring! Labs AG
+# Test scope: Skill invocation, focus on first part of interaction
+#=====================================================================================================================
+
+---
+configuration:
+  invoker: VirtualDeviceInvoker
+  locale: en-US
+  virtualDeviceToken: <VIRTUAL_DEVICE_TOKEN_FROM_BESPOKEN_DASHBOARD>
+
+---
+- test: "Sequence 01. Test scenario: launch request, no further interaction"
+- "open bring": "welcome to bring"
+
+---
+- test: "Sequence 02. Test scenario: launch request, one interaction (card not present in skill, just for demo purposes)"
+- "open bring":
+  - prompt: "welcome to bring"
+  - reprompt: undefined
+  - cardContent: undefined
+- "what is on my list":
+  - response.outputSpeech.ssml: "milk"
+  - response.outputSpeech.ssml: "eggs"
+  - response.outputSpeech.ssml: "apples"
+  - response.card.mainTitle: "This is the content of your list:"
+  - response.card.subTitle: "Bring! Shopping List"
+  - response.card.textField: "Milk‌\nEggs"
+  - response.card.imageURL: "https://s3-eu-west-1.amazonaws.com/bring-images/images/1200x800.jpg"

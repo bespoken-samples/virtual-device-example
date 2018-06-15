@@ -1,0 +1,32 @@
+#=====================================================================================================================
+#     ______    _ ____  ______        __  _
+#    / __/ /__ (_) / / /_  __/__ ___ / /_(_)__  ___ _
+#   _\ \/  '_// / / /   / / / -_|_-</ __/ / _ \/ _ `/
+#  /___/_/\_\/_/_/_/   /_/  \__/___/\__/_/_//_/\_, /
+#                                             /___/
+#
+# Created by Bespoken
+# Learn more at https://read.bespoken.io/unit-testing/getting-started/
+#
+# Skill name: "Bring! Shopping List" by Bring! Labs AG
+# Test scope: Skill invocation and removing items
+#=====================================================================================================================
+
+---
+configuration:
+  invoker: VirtualDeviceInvoker
+  locale: en-US
+  virtualDeviceToken: <VIRTUAL_DEVICE_TOKEN_FROM_BESPOKEN_DASHBOARD>
+
+#---
+#- test: "Sequence 01. Test scenario: Invoke intent removing items, no further interaction"
+#- "open bring and remove apples and oranges": "ok* i have removed apples and oranges"
+
+---
+- test: "Sequence 02. Test scenario: Invoke intent remove items in different interaction"
+- "open bring": "welcome to bring how can i help"
+- "what is on my list":
+  - response.outputSpeech.ssml: "milk"
+  - response.outputSpeech.ssml: "cheese and wine"
+  - response.outputSpeech.ssml: "apples"
+- "remove cheese and wine": "* i have removed cheese and wine *"
