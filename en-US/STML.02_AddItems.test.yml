@@ -17,10 +17,11 @@ configuration:
   invoker: VirtualDeviceInvoker
   locale: en-US
   virtualDeviceToken: <VIRTUAL_DEVICE_TOKEN_FROM_BESPOKEN_DASHBOARD>
+  invocationName: bring
 
 ---
-#- test: "Sequence 01. Test scenario: Invoke intent adding items, no further interaction"
-#- "open bring and add apples and oranges": "ok* apples and oranges is on your list*"
+- test: "Sequence 01. Test scenario: Invoke intent adding items, no further interaction"
+- "open bring and add apples and oranges": "ok* apples and oranges is on your list*"
 
 ---
 - test: "Sequence 02. Test scenario: Invoke intent adding items in different interaction"

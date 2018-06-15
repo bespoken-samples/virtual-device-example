@@ -16,7 +16,8 @@
 configuration:
   invoker: VirtualDeviceInvoker
   locale: en-US
-  virtualDeviceToken: <VIRTUAL_DEVICE_TOKEN_FROM_BESPOKEN_DASHBOARD>
+  virtualDeviceToken: aebfbe63-2006-40cd-8476-86b211f6575c
+  invocationName: bring
 
 ---
 - test: "Sequence 01. Test scenario: launch request, no further interaction"
@@ -29,10 +30,9 @@ configuration:
   - reprompt: undefined
   - cardContent: undefined
 - "what is on my list":
-  - response.outputSpeech.ssml: "milk"
-  - response.outputSpeech.ssml: "eggs"
-  - response.outputSpeech.ssml: "apples"
-  - response.card.mainTitle: "This is the content of your list:"
-  - response.card.subTitle: "Bring! Shopping List"
-  - response.card.textField: "Milk‌\nEggs"
-  - response.card.imageURL: "https://s3-eu-west-1.amazonaws.com/bring-images/images/1200x800.jpg"
+  - prompt: "milk"
+  - prompt: "eggs"
+  - prompt: "apples"
+  - cardTitle: "This is the content of your list:"
+  - cardContent: "Milk‌\nEggs"
+  - cardImageURL: "https://s3-eu-west-1.amazonaws.com/bring-images/images/1200x800.jpg"

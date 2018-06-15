@@ -17,16 +17,17 @@ configuration:
   invoker: VirtualDeviceInvoker
   locale: en-US
   virtualDeviceToken: <VIRTUAL_DEVICE_TOKEN_FROM_BESPOKEN_DASHBOARD>
+  invocationName: bring
 
-#---
-#- test: "Sequence 01. Test scenario: Invoke intent removing items, no further interaction"
-#- "open bring and remove apples and oranges": "ok* i have removed apples and oranges"
+---
+- test: "Sequence 01. Test scenario: Invoke intent removing items, no further interaction"
+- "open bring and remove apples and oranges": "ok* i have removed apples and oranges"
 
 ---
 - test: "Sequence 02. Test scenario: Invoke intent remove items in different interaction"
 - "open bring": "welcome to bring how can i help"
 - "what is on my list":
-  - response.outputSpeech.ssml: "milk"
-  - response.outputSpeech.ssml: "cheese and wine"
-  - response.outputSpeech.ssml: "apples"
+  - prompt: "milk"
+  - prompt: "cheese and wine"
+  - prompt: "apples"
 - "remove cheese and wine": "* i have removed cheese and wine *"
