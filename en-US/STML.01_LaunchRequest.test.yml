@@ -28,11 +28,12 @@ configuration:
 - "open bring":
   - prompt: "welcome to bring"
   - reprompt: undefined
-  - cardContent: undefined
+  - card: undefined
 - "what is on my list":
-  - prompt: "milk"
-  - prompt: "eggs"
-  - prompt: "apples"
+  - prompt:
+    - "milk"
+    - "eggs"
+    - "apples"
   - cardTitle: "This is the content of your list:"
   - cardContent: "Milk‌\nEggs"
   - cardImageURL: "https://s3-eu-west-1.amazonaws.com/bring-images/images/1200x800.jpg"

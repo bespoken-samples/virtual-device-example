@@ -21,11 +21,11 @@ configuration:
 
 ---
 - test: "Sequence 01. Test scenario: Invoke intent adding items, no further interaction"
-- "open bring and add apples and oranges": "ok* apples and oranges is on your list*"
+- "open bring and add apples and oranges": "* apples and oranges *"
 
 ---
 - test: "Sequence 02. Test scenario: Invoke intent adding items in different interaction"
 - "open bring": "*"
 - "add cheese and wine": "ok* cheese and wine is on your *"
-- "read my list": "you have the following items on your list * cheese and wine *"
+- "read my list": "you have * cheese and wine *"
 

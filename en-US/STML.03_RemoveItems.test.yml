@@ -20,14 +20,20 @@ configuration:
   invocationName: bring
 
 ---
-- test: "Sequence 01. Test scenario: Invoke intent removing items, no further interaction"
-- "open bring and remove apples and oranges": "ok* i have removed apples and oranges"
+- test: "Sequence 01. Test scenario: Invoke intent adding items, no further interaction"
+- "open bring and add lettuce": "* lettuce *"
 
 ---
-- test: "Sequence 02. Test scenario: Invoke intent remove items in different interaction"
+- test: "Sequence 02. Test scenario: Invoke intent removing items, no further interaction"
+- "open bring and remove lettuce": "ok* i have removed lettuce"
+
+---
+- test: "Sequence 03. Test scenario: Invoke intent remove items in different interaction"
 - "open bring": "welcome to bring how can i help"
+- "add cheese and wine": "ok* cheese and wine is on your *"
 - "what is on my list":
-  - prompt: "milk"
-  - prompt: "cheese and wine"
-  - prompt: "apples"
+  - prompt:
+    - "milk"
+    - "cheese and wine"
+    - "apples"
 - "remove cheese and wine": "* i have removed cheese and wine *"
