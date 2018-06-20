@@ -1,6 +1,9 @@
 {
-  "trace": "true",
+  "trace": "false",
   "jest": {
-    "silent": false
+    "silent": true
+  },
+  "homophones": {
+    "lettuce": ["let us"]
   }
 }
