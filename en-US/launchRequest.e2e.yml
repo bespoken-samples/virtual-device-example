@@ -6,7 +6,8 @@
 #                                             /___/
 #
 # Created by Bespoken
-# Learn more at https://read.bespoken.io/unit-testing/getting-started/
+# Learn more at https://read.bespoken.io/end-to-end/getting-started/
+# >>> If you need assistance please chat with us here: https://apps.bespoken.io/dashboard (lower right-hand corner)
 #
 # Skill name: "Bring! Shopping List" by Bring! Labs AG
 # Test scope: Skill invocation, focus on first part of interaction
@@ -14,7 +15,6 @@
 
 ---
 configuration:
-  invoker: VirtualDeviceInvoker
   locale: en-US
   virtualDeviceToken: <VIRTUAL_DEVICE_TOKEN_FROM_BESPOKEN_DASHBOARD>
   invocationName: bring

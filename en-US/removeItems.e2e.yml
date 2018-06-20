@@ -6,26 +6,34 @@
 #                                             /___/
 #
 # Created by Bespoken
-# Learn more at https://read.bespoken.io/unit-testing/getting-started/
+# Learn more at https://read.bespoken.io/end-to-end/getting-started/
+# >>> If you need assistance please chat with us here: https://apps.bespoken.io/dashboard (lower right-hand corner)
 #
 # Skill name: "Bring! Shopping List" by Bring! Labs AG
-# Test scope: Skill invocation and add items
+# Test scope: Skill invocation and removing items
 #=====================================================================================================================
 
 ---
 configuration:
-  invoker: VirtualDeviceInvoker
   locale: en-US
   virtualDeviceToken: <VIRTUAL_DEVICE_TOKEN_FROM_BESPOKEN_DASHBOARD>
   invocationName: bring
 
 ---
 - test: "Sequence 01. Test scenario: Invoke intent adding items, no further interaction"
-- "open bring and add apples and oranges": "* apples and oranges *"
+- "open bring and add lettuce": "* lettuce *"
 
 ---
-- test: "Sequence 02. Test scenario: Invoke intent adding items in different interaction"
-- "open bring": "*"
-- "add cheese and wine": "ok* cheese and wine is on your *"
-- "read my list": "you have * cheese and wine *"
+- test: "Sequence 02. Test scenario: Invoke intent removing items, no further interaction"
+- "open bring and remove lettuce": "ok* i have removed lettuce"
 
+---
+- test: "Sequence 03. Test scenario: Invoke intent remove items in different interaction"
+- "open bring": "welcome to bring how can i help"
+- "add cheese and wine": "ok* cheese and wine is on your *"
+- "what is on my list":
+  - prompt:
+    - "milk"
+    - "cheese and wine"
+    - "apples"
+- "remove cheese and wine": "* i have removed cheese and wine *"
