@@ -27,5 +27,5 @@ configuration:
 - test: "Sequence 02. Test scenario: Invoke intent adding items in different interaction"
 - "open bring": "*"
 - "add cheese and wine": "ok* cheese and wine is on your *"
-- "read my list": "you have * cheese and wine *"
+- "read my list": "you have * cheese and wine * apples and oranges *"
 

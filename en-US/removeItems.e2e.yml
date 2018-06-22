@@ -22,6 +22,7 @@ configuration:
 ---
 - test: "Sequence 01. Test scenario: Invoke intent adding items, no further interaction"
 - "open bring and add lettuce": "* lettuce *"
+- "read my list": "* lettuce *"
 
 ---
 - test: "Sequence 02. Test scenario: Invoke intent removing items, no further interaction"
