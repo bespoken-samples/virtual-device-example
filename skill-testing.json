@@ -1,10 +1,13 @@
 {
-  "trace": true,
-  "jest": {
-    "silent": false
-  },
+  "invoker": "VirtualDeviceInvoker",
   "homophones": {
-    "lettuce": ["let us"]
+    "lettuce": ["let us"],
+    "ok": ["okay"],
+    "okay": ["ok"],
+    "figs": ["six","6","vicks"]
   },
-  "invoker": "VirtualDeviceInvoker"
+  "trace": false,
+  "jest": {
+    "silent": true
+  }
 }

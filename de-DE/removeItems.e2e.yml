@@ -15,26 +15,24 @@
 
 ---
 configuration:
-  locale: en-US
-  voiceId: Joey
+  locale: de-DE
+  voiceId: Hans
   virtualDeviceToken: <VIRTUAL_DEVICE_TOKEN_FROM_BESPOKEN_DASHBOARD>
   invocationName: bring
 
 ---
-- test: "Sequence 01. Test scenario: launch request, no further interaction"
-- open bring: welcome to bring
+- test: "Sequence 01. Test scenario: Adding items with one-shot utterance, no further interaction"
+- öffne bring und füge obst hinzu: okay obst ist auf deiner liste
 
 ---
-- test: "Sequence 02. Test scenario: launch request, one interaction (card not present in skill, just for demo purposes)"
-- open bring:
-  - prompt: welcome to bring
-  - reprompt: undefined
-  - card: undefined
-- what is on my list:
+- test: "Sequence 02. Test scenario: Removing items with one-shot utterance, no further interaction"
+- öffne bring und entferne obst: okay ich habe obst entfernt
+
+---
+- test.only: "Sequence 03. Test scenario: Invoke intent, multiple interactions"
+- öffne bring: willkommen
+- sag mir was auf meiner liste ist:
   - prompt:
-    - milk
-    - eggs
-    - apples
-  - cardTitle: "This is the content of your list:"
-  - cardContent: "Milk‌\nEggs"
-  - cardImageURL: "https://s3-eu-west-1.amazonaws.com/bring-images/images/1200x800.jpg"
+    - äpfel
+    - gemüse
+- entferne gemüse: okay ich habe gemüse entfernt

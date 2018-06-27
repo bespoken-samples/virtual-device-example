@@ -10,31 +10,26 @@
 # >>> If you need assistance please chat with us here: https://apps.bespoken.io/dashboard (lower right-hand corner)
 #
 # Skill name: "Bring! Shopping List" by Bring! Labs AG
-# Test scope: Skill invocation, focus on first part of interaction
+# Test scope: Skill invocation and add items
 #=====================================================================================================================
 
 ---
 configuration:
-  locale: en-US
-  voiceId: Joey
-  virtualDeviceToken: <VIRTUAL_DEVICE_TOKEN_FROM_BESPOKEN_DASHBOARD>
+  locale: en-GB
+  voiceId: Amy
+  virtualDeviceToken: cc32efe5-743a-4102-825f-d22af45ed43b
   invocationName: bring
 
 ---
-- test: "Sequence 01. Test scenario: launch request, no further interaction"
-- open bring: welcome to bring
+- test: "Sequence 01. Test scenario: Invoke intent adding items, no further interaction"
+- open bring and add apples and oranges: "* apples and oranges *" # One-shot utterances close the session after they are invoked.
 
 ---
-- test: "Sequence 02. Test scenario: launch request, one interaction (card not present in skill, just for demo purposes)"
-- open bring:
-  - prompt: welcome to bring
-  - reprompt: undefined
-  - card: undefined
-- what is on my list:
-  - prompt:
-    - milk
-    - eggs
-    - apples
-  - cardTitle: "This is the content of your list:"
-  - cardContent: "Milk‌\nEggs"
-  - cardImageURL: "https://s3-eu-west-1.amazonaws.com/bring-images/images/1200x800.jpg"
+- test: "Sequence 02. Test scenario: Check apples and oranges are on the list"
+- open bring and read my list: you have the following items on your list * apples and oranges *
+
+---
+- test: "Sequence 03. Test scenario: Invoke intent adding items in different interaction"
+- open bring: "*"
+- add cider: okay cider is on your *
+- read my list: you have * cider *

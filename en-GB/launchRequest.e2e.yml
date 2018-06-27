@@ -15,9 +15,9 @@
 
 ---
 configuration:
-  locale: en-US
-  voiceId: Joey
-  virtualDeviceToken: <VIRTUAL_DEVICE_TOKEN_FROM_BESPOKEN_DASHBOARD>
+  locale: en-GB
+  voiceId: Amy
+  virtualDeviceToken: cc32efe5-743a-4102-825f-d22af45ed43b
   invocationName: bring
 
 ---
