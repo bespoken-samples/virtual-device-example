@@ -30,7 +30,6 @@ configuration:
   locale: en-US
   voiceId: Joey
   virtualDeviceToken: <VIRTUAL_DEVICE_TOKEN_FROM_BESPOKEN_DASHBOARD>
-  invocationName: bring
 ```
 
 ### Additional parameters  
@@ -51,22 +50,6 @@ You will notice there is a file named skill-testing.json in the sample project. 
 * Homophones: Use this to specify words with similar sound, for example if you receive "let us" instead of "lettuce" or "six" instead of "figs".
 * Trace and silent: Both parameters allows you to get extra information from the response payload, to enable set trace to true and silent to false.
  
-
-* If you are using different invocation names for your skill you can use the INVOCATION_NAME parameter.This will cause any instances of the value INVOCATION_NAME to be replaced by <my_invocation_name> in the test scripts.
-```
-replace.INVOCATION_NAME=<my_invocation_name>
-```
-So a script that looks like this:
-```yaml
-"open INVOCATION_NAME and say hello": "*"
-```
-
-Will be turned into this:
-```yaml
-"open my_invocation_name and say hello": "*"
-```
-This is a useful feature for tests that are run against multiple instances of the same skill, where there are slight variations in the input or output.
-
 ## Running tests
 Once you have created your tests, you can run a particular file by entering:
 ```
