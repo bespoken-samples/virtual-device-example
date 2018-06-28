@@ -18,7 +18,6 @@ configuration:
   locale: de-DE
   voiceId: Hans
   virtualDeviceToken: <VIRTUAL_DEVICE_TOKEN_FROM_BESPOKEN_DASHBOARD>
-  invocationName: bring
 
 ---
 - test: "Sequence 01. Test scenario: Invoke intent with one-shot utterance (adding items)"

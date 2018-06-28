@@ -18,7 +18,6 @@ configuration:
   locale: en-GB
   voiceId: Amy
   virtualDeviceToken: cc32efe5-743a-4102-825f-d22af45ed43b
-  invocationName: bring
 
 ---
 - test: "Sequence 01. Test scenario: Invoke intent adding items, no further interaction"
@@ -30,6 +29,6 @@ configuration:
 
 ---
 - test: "Sequence 03. Test scenario: Invoke intent adding items in different interaction"
-- open bring: "*"
+- open bring: welcome
 - add cider: okay cider is on your *
 - read my list: you have * cider *

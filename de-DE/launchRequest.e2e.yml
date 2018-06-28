@@ -18,7 +18,6 @@ configuration:
   locale: de-DE
   voiceId: Hans
   virtualDeviceToken: <VIRTUAL_DEVICE_TOKEN_FROM_BESPOKEN_DASHBOARD>
-  invocationName: bring
 
 ---
 - test: "Sequence 01. Test scenario: launch request, no further interaction"
@@ -31,5 +30,5 @@ configuration:
 
 ---
 - test: "Sequence 02. Test scenario: launch request, one interaction"
-- öffne bring: "*"
+- öffne bring: willkommen
 - sag mir was auf meiner liste ist: du hast folgendes auf deiner liste

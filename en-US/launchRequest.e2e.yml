@@ -18,7 +18,6 @@ configuration:
   locale: en-US
   voiceId: Joey
   virtualDeviceToken: <VIRTUAL_DEVICE_TOKEN_FROM_BESPOKEN_DASHBOARD>
-  invocationName: bring
 
 ---
 - test: "Sequence 01. Test scenario: launch request, no further interaction"

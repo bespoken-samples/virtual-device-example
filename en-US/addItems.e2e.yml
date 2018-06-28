@@ -18,7 +18,6 @@ configuration:
   locale: en-US
   voiceId: Joey
   virtualDeviceToken: <VIRTUAL_DEVICE_TOKEN_FROM_BESPOKEN_DASHBOARD>
-  invocationName: bring
 
 ---
 - test: "Sequence 01. Test scenario: Invoke intent adding items, no further interaction"
@@ -29,8 +28,8 @@ configuration:
 - open bring and read my list: you have the following items on your list * apples and oranges *
 
 ---
-- test: "Sequence 03. Test scenario: Invoke intent adding items in different interaction"
-- open bring: "*"
+- test.only: "Sequence 03. Test scenario: Invoke intent adding items in different interaction"
+- open bring: welcome
 - add cheese and wine: ok cheese and wine is on your *
 - read my list: you have * cheese and wine *
 
