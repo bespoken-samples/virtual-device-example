@@ -35,5 +35,5 @@ configuration:
     - eggs
     - apples
   - cardTitle: "This is the content of your list:"
-  - cardContent: "Milk‌\nEggs"
+  - cardContent: Milk‌\nEggs
   - cardImageURL: "https://s3-eu-west-1.amazonaws.com/bring-images/images/1200x800.jpg"
