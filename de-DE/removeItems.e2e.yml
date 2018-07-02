@@ -20,15 +20,15 @@ configuration:
   virtualDeviceToken: <VIRTUAL_DEVICE_TOKEN_FROM_BESPOKEN_DASHBOARD>
 
 ---
-- test: "Sequence 01. Test scenario: Adding items with one-shot utterance, no further interaction"
+- test: Adding items with one-shot utterance, no further interaction
 - öffne bring und füge obst hinzu: okay obst ist auf deiner liste
 
 ---
-- test: "Sequence 02. Test scenario: Removing items with one-shot utterance, no further interaction"
+- test: Removing items with one-shot utterance, no further interaction
 - öffne bring und entferne obst: okay ich habe obst entfernt
 
 ---
-- test.only: "Sequence 03. Test scenario: Invoke intent, multiple interactions"
+- test.only: Invoke intent, multiple interactions
 - öffne bring: willkommen
 - sag mir was auf meiner liste ist:
   - prompt:

@@ -20,15 +20,15 @@ configuration:
   virtualDeviceToken: cc32efe5-743a-4102-825f-d22af45ed43b
 
 ---
-- test: "Sequence 01. Test scenario: Invoke intent adding items, no further interaction"
+- test: Invoke intent adding items, no further interaction
 - open bring and add lettuce: "* lettuce *" # One-shot utterances like these closes the session after the interaction.
 
 ---
-- test: "Sequence 02. Test scenario: Invoke intent removing items, no further interaction"
+- test: Invoke intent removing items, no further interaction
 - open bring and remove lettuce: okay i have removed lettuce
 
 ---
-- test: "Sequence 03. Test scenario: Invoke intent remove items in different interaction"
+- test: Invoke intent remove items in different interaction
 - open bring: welcome to bring how can i help
 - add carrots: okay carrots is on your *
 - what is on my list:

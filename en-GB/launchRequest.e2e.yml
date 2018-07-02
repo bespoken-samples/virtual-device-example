@@ -20,11 +20,11 @@ configuration:
   virtualDeviceToken: cc32efe5-743a-4102-825f-d22af45ed43b
 
 ---
-- test: "Sequence 01. Test scenario: launch request, no further interaction"
+- test: Launch request, no further interaction
 - open bring: welcome to bring
 
 ---
-- test: "Sequence 02. Test scenario: launch request, one interaction (card not present in skill, just for demo purposes)"
+- test: Launch request, one interaction (card not present in skill, just for demo purposes)
 - open bring:
   - prompt: welcome to bring
   - reprompt: undefined

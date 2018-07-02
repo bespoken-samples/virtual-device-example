@@ -20,7 +20,7 @@ configuration:
   virtualDeviceToken: <VIRTUAL_DEVICE_TOKEN_FROM_BESPOKEN_DASHBOARD>
 
 ---
-- test: "Sequence 01. Test scenario: launch request, no further interaction"
+- test: Launch request, no further interaction
 - öffne bring:
   - prompt:
     - willkommen bei der bring einkaufsliste
@@ -29,6 +29,6 @@ configuration:
     - willkommen beibringen was kann ich für dich tun
 
 ---
-- test: "Sequence 02. Test scenario: launch request, one interaction"
+- test: Launch request, one interaction
 - öffne bring: willkommen
 - sag mir was auf meiner liste ist: du hast folgendes auf deiner liste

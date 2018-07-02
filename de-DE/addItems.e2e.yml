@@ -20,11 +20,11 @@ configuration:
   virtualDeviceToken: <VIRTUAL_DEVICE_TOKEN_FROM_BESPOKEN_DASHBOARD>
 
 ---
-- test: "Sequence 01. Test scenario: Invoke intent with one-shot utterance (adding items)"
+- test: Invoke intent with one-shot utterance (adding items)
 - öffne bring und füge obst hinzu: okay obst ist auf deiner liste
 
 ---
-- test: "Sequence 02. Test scenario: Invoke intent, multiple interactions (adding items)"
+- test: Invoke intent, multiple interactions (adding items)
 - öffne bring: willkommen
 - füge gemüse: okay gemüse ist auf deiner liste
 - sag mir was auf meiner liste ist: obst * gemüse

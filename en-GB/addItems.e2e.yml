@@ -20,15 +20,15 @@ configuration:
   virtualDeviceToken: cc32efe5-743a-4102-825f-d22af45ed43b
 
 ---
-- test: "Sequence 01. Test scenario: Invoke intent adding items, no further interaction"
+- test: Invoke intent adding items, no further interaction
 - open bring and add apples and oranges: "* apples and oranges *" # One-shot utterances close the session after they are invoked.
 
 ---
-- test: "Sequence 02. Test scenario: Check apples and oranges are on the list"
+- test: Check apples and oranges are on the list
 - open bring and read my list: you have the following items on your list * apples and oranges *
 
 ---
-- test: "Sequence 03. Test scenario: Invoke intent adding items in different interaction"
+- test: Invoke intent adding items in different interaction
 - open bring: welcome
 - add cider: okay cider is on your *
 - read my list: you have * cider *
