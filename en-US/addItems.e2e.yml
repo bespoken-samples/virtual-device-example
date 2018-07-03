@@ -28,7 +28,7 @@ configuration:
 - open bring and read my list: you have the following items on your list * apples and oranges *
 
 ---
-- test.only: Invoke intent adding items in different interaction
+- test: Invoke intent adding items in different interaction
 - open bring: welcome
 - add cheese and wine: ok cheese and wine is on your *
 - read my list: you have * cheese and wine *

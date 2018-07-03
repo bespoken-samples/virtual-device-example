@@ -28,7 +28,7 @@ configuration:
 - öffne bring und entferne obst: okay ich habe obst entfernt
 
 ---
-- test.only: Invoke intent, multiple interactions
+- test: Invoke intent, multiple interactions
 - öffne bring: willkommen
 - sag mir was auf meiner liste ist:
   - prompt:

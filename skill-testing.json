@@ -8,6 +8,7 @@
   },
   "trace": false,
   "jest": {
-    "silent": true
+    "silent": true,
+    "testMatch": ["**/test/*.yml", "**/tests/*.yml", "**/*.e2e.yml", "**/*.spec.yml"]
   }
 }
