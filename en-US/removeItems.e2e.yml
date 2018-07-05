@@ -21,19 +21,19 @@ configuration:
 
 ---
 - test: Invoke intent adding items, no further interaction
-- open bring and add lettuce: "* lettuce *" # One-shot utterances like these closes the session after the interaction.
+- open bring and add lettuce: lettuce is on your list # One-shot utterances like these closes the session after the interaction.
 
 ---
 - test: Invoke intent removing items, no further interaction
-- open bring and remove lettuce: ok i have removed lettuce
+- open bring and remove lettuce: i have removed lettuce
 
 ---
 - test: Invoke intent remove items in different interaction
 - open bring: welcome to bring how can i help
-- add figs: okay figs is on your *
+- add figs: figs is on your list
 - what is on my list:
   - prompt:
     - milk
     - figs
     - apples
-- remove figs: "* i have removed figs *"
+- remove figs: i have removed figs

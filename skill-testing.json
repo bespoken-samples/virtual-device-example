@@ -2,8 +2,6 @@
   "invoker": "VirtualDeviceInvoker",
   "homophones": {
     "lettuce": ["let us"],
-    "ok": ["okay"],
-    "okay": ["ok"],
     "figs": ["six","6","vicks"]
   },
   "trace": false,

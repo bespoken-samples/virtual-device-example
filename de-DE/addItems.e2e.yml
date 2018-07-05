@@ -27,5 +27,7 @@ configuration:
 - test: Invoke intent, multiple interactions (adding items)
 - öffne bring: willkommen
 - füge gemüse: okay gemüse ist auf deiner liste
-- sag mir was auf meiner liste ist: obst * gemüse
-
+- sag mir was auf meiner liste ist:
+  - prompt:
+    - obst
+    - gemüse

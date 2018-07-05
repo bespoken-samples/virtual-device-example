@@ -21,14 +21,14 @@ configuration:
 
 ---
 - test: Invoke intent adding items, no further interaction
-- open bring and add apples and oranges: "* apples and oranges *" # One-shot utterances close the session after they are invoked.
+- open bring and add apples and oranges: apples and oranges # One-shot utterances close the session after they are invoked.
 
 ---
 - test: Check apples and oranges are on the list
-- open bring and read my list: you have the following items on your list * apples and oranges *
+- open bring and read my list: you have the following items on your list * apples and oranges
 
 ---
 - test: Invoke intent adding items in different interaction
 - open bring: welcome
-- add cider: okay cider is on your *
-- read my list: you have * cider *
+- add cider: okay cider is on your list
+- read my list: you have the following items on your list * cider
