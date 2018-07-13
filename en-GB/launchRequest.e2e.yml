@@ -1,0 +1,39 @@
+#=====================================================================================================================
+#     ______    _ ____  ______        __  _
+#    / __/ /__ (_) / / /_  __/__ ___ / /_(_)__  ___ _
+#   _\ \/  '_// / / /   / / / -_|_-</ __/ / _ \/ _ `/
+#  /___/_/\_\/_/_/_/   /_/  \__/___/\__/_/_//_/\_, /
+#                                             /___/
+#
+# Created by Bespoken
+# Learn more at https://read.bespoken.io/end-to-end/getting-started/
+# >>> If you need assistance please chat with us here: https://apps.bespoken.io/dashboard (lower right-hand corner)
+#
+# Skill name: "Bring! Shopping List" by Bring! Labs AG
+# Test scope: Skill invocation, focus on first part of interaction
+#=====================================================================================================================
+
+---
+configuration:
+  locale: en-GB
+  voiceId: Amy
+  virtualDeviceToken: cc32efe5-743a-4102-825f-d22af45ed43b
+
+---
+- test: Launch request, no further interaction
+- open bring: welcome to bring
+
+---
+- test: Launch request, one interaction (card not present in skill, just for demo purposes)
+- open bring:
+  - prompt: welcome to bring
+  - reprompt: undefined
+  - card: undefined
+- what is on my list:
+  - prompt:
+    - milk
+    - eggs
+    - apples
+  - cardTitle: "This is the content of your list:"
+  - cardContent: Milk‌\nEggs
+  - cardImageURL: "https://s3-eu-west-1.amazonaws.com/bring-images/images/1200x800.jpg"
