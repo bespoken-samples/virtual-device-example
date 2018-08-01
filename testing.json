@@ -1,8 +1,9 @@
 {
-  "invoker": "VirtualDeviceInvoker",
+  "type": "e2e",
   "homophones": {
     "lettuce": ["let us"],
-    "figs": ["six","6","vicks"]
+    "figs": ["six","6","vicks"],
+    "carrots": ["carried"]
   },
   "trace": false,
   "jest": {

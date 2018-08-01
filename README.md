@@ -11,7 +11,7 @@ Make sure you have npm installed, [get it here](https://www.npmjs.com/get-npm).
 Install Bespoken CLI to run the scripts. Open a command-line and run this command:  
 
 ```
-npm install bespoken-tools@beta -g
+npm install bespoken-tools -g
 ```
 ### Get your Virtual Device Token
 First, you need to get a token. See [here for instructions](https://github.com/bespoken/virtual-device-sdk/blob/master/docs/setup.md).
@@ -33,10 +33,10 @@ configuration:
 ```
 
 ### Additional parameters  
-You will notice there is a file named skill-testing.json in the sample project. This file contains extra configuration parameters like these:
+You will notice there is a file named testing.json in the sample project. This file contains extra configuration parameters like these:
 ```json
 {
-  "invoker": "VirtualDeviceInvoker",
+  "type": "e2e",
   "homophones": {
     "lettuce": ["let us"],
     "figs": ["six","6","vicks"]

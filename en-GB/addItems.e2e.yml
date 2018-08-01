@@ -30,5 +30,5 @@ configuration:
 ---
 - test: Invoke intent adding items in different interaction
 - open bring: welcome
-- add cider: okay cider is on your list
+- add cider: ok cider is on your list
 - read my list: you have the following items on your list * cider

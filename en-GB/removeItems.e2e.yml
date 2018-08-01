@@ -30,7 +30,7 @@ configuration:
 ---
 - test: Invoke intent remove items in different interaction
 - open bring: welcome to bring how can i help
-- add carrots: okay carrots is on your list
+- add carrots: ok carrots is on your list
 - what is on my list:
   - prompt:
     - milk
