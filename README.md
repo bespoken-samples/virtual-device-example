@@ -14,7 +14,7 @@ Install Bespoken CLI to run the scripts. Open a command-line and run this comman
 npm install bespoken-tools -g
 ```
 ### Get your Virtual Device Token
-First, you need to get a token. See [here for instructions](https://github.com/bespoken/virtual-device-sdk/blob/master/docs/setup.md).
+First, you need to get a token. See [here for instructions](https://read.bespoken.io/end-to-end/setup/).
 
 ### Configure your test scripts:  
 Each test script contains the token for each locale and other important parameters. We have included our tokens on each test script file in this repo so you can run them and see them in action. You should add
