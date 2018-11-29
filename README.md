@@ -24,7 +24,7 @@ npm install
 Within the project directory.
 
 ### Get your Virtual Device Token
-First, you need to get a token. See [here for instructions](https://github.com/bespoken/virtual-device-sdk/blob/master/docs/setup.md).
+First, you need to get a token. See [here for instructions](https://read.bespoken.io/end-to-end/setup/).
 
 ### Configure your test scripts:  
 Each test script contains the token for each locale and other important parameters. We have included our tokens on each test script file in this repo so you can run them and see them in action. You should add
@@ -80,4 +80,4 @@ That's it! Now just wait, and your tests will run. The results will be shown in 
 See the full docs for the test scripts [here](https://read.bespoken.io/end-to-end/getting-started/).
 
 ## Questions/Feedback?
-Help is only a few clicks away. Have questions or feedback? Email us at [suppprt@bespoken.io](mailto:support@bespoken.io).
+Help is only a few clicks away. Have questions or feedback? Email us at [support@bespoken.io](mailto:support@bespoken.io).
