@@ -1,13 +1,30 @@
 {
   "type": "e2e",
+  "findReplace": {
+    "SKILL_NAME": "My Skill"
+  },
   "homophones": {
+    "bring": ["ring", "bing"],
     "lettuce": ["let us"],
     "figs": ["six","6","vicks"],
     "carrots": ["carried"]
   },
+  "platform": "alexa",
+  "type": "e2e",
   "trace": false,
   "jest": {
-    "silent": true,
+    "reporters": [
+        "default",
+        [
+          "./node_modules/jest-html-reporter",
+          {
+             "includeFailureMsg": true,
+        	   "pageTitle": "Bespoken Test Report"
+          }
+        ]
+      ],
+    "silent": false,
     "testMatch": ["**/test/*.yml", "**/tests/*.yml", "**/*.e2e.yml", "**/*.spec.yml"]
-  }
+  },
+  "virtualDeviceToken": "<VIRTUAL_DEVICE_TOKEN_FROM_BESPOKEN_DASHBOARD>"
 }
