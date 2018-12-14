@@ -11,6 +11,9 @@
 #
 # Skill name: "Bring! Shopping List" by Bring! Labs AG
 # Test scope: Skill invocation, focus on first part of interaction
+# Platform  : Alexa and Google Assistant
+# Invocation name for Alexa: open bring
+# Invocation name for Google: talk to bring shopping list
 #=====================================================================================================================
 
 ---
@@ -20,26 +23,47 @@ configuration:
 
 ---
 - test: Launch request, no further interaction
-- open bring: welcome to bring
+- INVOCATION_NAME: 
+  - prompt: 
+    - welcome to bring
+    - how should we start
+    - how can i assist you
+    - how can i help
+    - what can i do for you
 
 ---
 - test: Launch request followed by sequence of interactions
-- open skill name: welcome to bring
-- what is on my list: you have the following items on your list *
-- add bananas to my list: okay bananas is on your list
+- INVOCATION_NAME
+- what is on my list: 
+  - prompt:
+    - you have the following items on your list *
+    - here is your* list
+- add bananas to my list: 
+  - prompt:
+    - bananas* on your list
+    - done
 - goodbye:
   - prompt:
     - talk to you soon
     - bye bye happy shopping
+    - merry christmas to you soon
+    - /^$/ # This regex is equivalent to empty response or prompt = ""
 
 ---
 - test: Launch request, one interaction (card not present in skill, just for demo purposes)
-- open bring:
-  - prompt: welcome to bring
+- INVOCATION_NAME:
+  - prompt: 
+    - welcome to bring
+    - how should we start
+    - how can i assist you
+    - how can i help
+    - what can i do for you
   - reprompt: undefined
   - card: undefined
 - what is on my list:
-  - prompt: you have the following items on your list
+  - prompt:
+    - you have the following items on your list *
+    - here is your* list
   - cardTitle: "This is the content of your list:"
   - cardContent: Milk‌\nEggs
   - cardImageURL: "https://s3-eu-west-1.amazonaws.com/bring-images/images/1200x800.jpg"

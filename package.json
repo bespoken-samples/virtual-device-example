@@ -1,0 +1,10 @@
+{
+  "name": "virtual-device-example",
+  "version": "1.0.0",
+  "description": "This project aims to serve as an example and provides a template to start creating YAML test scripts for end-to-end testing Alexa skills and Google Actions. https://bespoken.io",
+  "author": "Bespoken",
+  "homepage": "https://bespoken.io",
+  "devDependencies": {
+    "jest-html-reporter": "^2.4.2"
+  }
+}
