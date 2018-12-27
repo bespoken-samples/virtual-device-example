@@ -23,7 +23,7 @@ configuration:
 
 ---
 - test: Launch request, no further interaction
-- INVOCATION_NAME: 
+- launch voice app:
   - prompt: 
     - welcome to bring
     - how should we start
@@ -33,14 +33,15 @@ configuration:
 
 ---
 - test: Launch request followed by sequence of interactions
-- INVOCATION_NAME
+- launch voice app
 - what is on my list: 
   - prompt:
     - you have the following items on your list *
     - here is your* list
-- add bananas to my list: 
+- add bananas to my list:
   - prompt:
     - bananas* on your list
+    - bananas to your list
     - done
 - goodbye:
   - prompt:
@@ -51,7 +52,7 @@ configuration:
 
 ---
 - test: Launch request, one interaction (card not present in skill, just for demo purposes)
-- INVOCATION_NAME:
+- launch voice app:
   - prompt: 
     - welcome to bring
     - how should we start

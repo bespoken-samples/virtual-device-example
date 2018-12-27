@@ -23,18 +23,21 @@ configuration:
 
 ---
 - test: Invoke intent adding items, no further interaction
-- INVOCATION_NAME and add lettuce: 
+- launch voice app and add lettuce:
   - prompt:
     - lettuce* on your list # One-shot utterances like these closes the session after the interaction.
+    - lettuce to your list
     - done
+    - all right
+    - okay
 
 ---
 - test: Invoke intent removing items, no further interaction
-- INVOCATION_NAME and remove lettuce: i have removed lettuce
+- launch voice app and remove lettuce: i have removed lettuce
 
 ---
 - test: Invoke intent remove items in different interaction
-- INVOCATION_NAME
+- launch voice app
 - add milk: 
   - prompt:
     - milk* on your list

@@ -23,25 +23,28 @@ configuration:
 
 ---
 - test: Invoke intent adding items, no further interaction
-- INVOCATION_NAME and add apples and oranges: # One-shot utterances close the session after they are invoked.
+- launch voice app and add apples and oranges: # One-shot utterances close the session after they are invoked.
   - prompt:
-    - apples and oranges 
+    - apples and orange*
     - apples orange* # Google Action return the results separated with commas
+    - all right
+    - okay
 
 ---
 - test: Check apples and oranges are on the list
-- INVOCATION_NAME and read my list: 
+- launch voice app and read my list:
   - prompt:
-    - you have the following items on your list * apples and oranges
+    - you have the following items on your list* apples and oranges
     - here is your * list # For Google Action, card is not supported yet
 
 ---
 - test: Invoke intent adding items in different interaction
-- INVOCATION_NAME
+- launch voice app
 - add cheese and wine: 
   - prompt:
     - ok cheese and wine is on your list
     - cheese wine
+    - done
 - read my list: 
   - prompt:
     - you have the following items on your list * cheese and wine

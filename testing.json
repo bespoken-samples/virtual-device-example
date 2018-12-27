@@ -1,7 +1,7 @@
 {
   "type": "e2e",
   "findReplace": {
-    "INVOCATION_NAME": "open bring"
+    "launch voice app": "open bring"
   },
   "homophones": {
     "bring": ["ring", "bing"],

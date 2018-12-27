@@ -48,7 +48,7 @@ You will notice there is a file named `testing.json` in the sample project. This
 {
   "type": "e2e",
   "findReplace": {
-    "INVOCATION_NAME": "open bring"
+    "launch voice app": "open bring"
   },
   "homophones": {
     "lettuce": ["let us"],
@@ -60,7 +60,7 @@ You will notice there is a file named `testing.json` in the sample project. This
   }
 }
 ```
-* __Find and replace__: This parameter will replace, within the test script files, the string `INVOCATION_NAME` with `open bring`.
+* __Find and replace__: This parameter will replace, within the test script files, the string `launch voice app` with `open bring`.
 * __Homophones__: Use this to specify words with a similar sound, for example, if you receive "let us" instead of "lettuce" or "six" instead of "figs".
 * __Trace and silent__: Both parameters allows you to get extra information from the response payload, to enable set trace to true and silent to false.
 
@@ -82,15 +82,15 @@ That command will run all yml files that are contained within that directory.
 To run the en-US test script files you need to overwrite some parameters from the command line. For example, if you are an MS Windows user you can run a specific test file for the Alexa skill like this:
 
 ```BASH
-$ set "findReplace.INVOCATION_NAME=open bring" & bst test en-US\launchRequest.e2e.yml --platform alexa
+$ set "findReplace.launch voice app=open bring" & bst test en-US\launchRequest.e2e.yml --platform alexa
 ```
 
-We are overwriting the `testing.json` `INVOCATION_NAME` parameter with the value of the environment variable `findReplace.INVOCATION_NAME`. Same happens when we use the `--platform alexa` flag.
+We are overwriting the `testing.json` `launch voice app` parameter with the value of the environment variable `findReplace.launch voice app`. Same happens when we use the `--platform alexa` flag.
 
 If we want to execute a test script for the Google Assistant version of the voice app we can write something like this:
 
 ```BASH
-$ set "findReplace.INVOCATION_NAME=talk to bring shopping list" & bst test en-US\launchRequest.e2e.yml --platform google
+$ set "findReplace.launch voice app=talk to bring shopping list" & bst test en-US\launchRequest.e2e.yml --platform google
 ```
 
 Notice how the invocation name changes.
