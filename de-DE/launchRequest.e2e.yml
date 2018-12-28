@@ -10,6 +10,7 @@
 # >>> If you need assistance please chat with us here: https://apps.bespoken.io/dashboard (lower right-hand corner)
 #
 # Skill name: "Bring! Shopping List" by Bring! Labs AG
+# Platform  : Alexa only
 # Test scope: Skill invocation, focus on first part of interaction
 #=====================================================================================================================
 
@@ -17,7 +18,6 @@
 configuration:
   locale: de-DE
   voiceId: Hans
-  virtualDeviceToken: <VIRTUAL_DEVICE_TOKEN_FROM_BESPOKEN_DASHBOARD>
 
 ---
 - test: Launch request, no further interaction

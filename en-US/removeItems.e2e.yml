@@ -11,29 +11,43 @@
 #
 # Skill name: "Bring! Shopping List" by Bring! Labs AG
 # Test scope: Skill invocation and removing items
+# Platform  : Alexa and Google Assistant
+# Invocation name for Alexa: open bring
+# Invocation name for Google: talk to bring shopping list
 #=====================================================================================================================
 
 ---
 configuration:
   locale: en-US
-  voiceId: Joey
-  virtualDeviceToken: <VIRTUAL_DEVICE_TOKEN_FROM_BESPOKEN_DASHBOARD>
+  voiceId: Joanna
 
 ---
 - test: Invoke intent adding items, no further interaction
-- open bring and add lettuce: lettuce is on your list # One-shot utterances like these closes the session after the interaction.
+- launch voice app and add lettuce:
+  - prompt:
+    - lettuce* on your list # One-shot utterances like these closes the session after the interaction.
+    - lettuce to your list
+    - done
+    - all right
+    - okay
 
 ---
 - test: Invoke intent removing items, no further interaction
-- open bring and remove lettuce: i have removed lettuce
+- launch voice app and remove lettuce: i have removed lettuce
 
 ---
 - test: Invoke intent remove items in different interaction
-- open bring: welcome to bring how can i help
-- add figs: figs is on your list
+- launch voice app
+- add milk: 
+  - prompt:
+    - milk* on your list
+    - done
 - what is on my list:
   - prompt:
+    - bananas
     - milk
-    - figs
     - apples
-- remove figs: i have removed figs
+    - cheese
+    - here is your * list
+- yes
+- remove milk: i have removed milk

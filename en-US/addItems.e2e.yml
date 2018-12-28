@@ -11,25 +11,41 @@
 #
 # Skill name: "Bring! Shopping List" by Bring! Labs AG
 # Test scope: Skill invocation and add items
+# Platform  : Alexa and Google Assistant
+# Invocation name for Alexa: open bring
+# Invocation name for Google: talk to bring shopping list
 #=====================================================================================================================
 
 ---
 configuration:
   locale: en-US
-  voiceId: Joey
-  virtualDeviceToken: <VIRTUAL_DEVICE_TOKEN_FROM_BESPOKEN_DASHBOARD>
+  voiceId: Joanna
 
 ---
 - test: Invoke intent adding items, no further interaction
-- open bring and add apples and oranges: apples and oranges # One-shot utterances close the session after they are invoked.
+- launch voice app and add apples and oranges: # One-shot utterances close the session after they are invoked.
+  - prompt:
+    - apples and orange*
+    - apples orange* # Google Action return the results separated with commas
+    - all right
+    - okay
 
 ---
 - test: Check apples and oranges are on the list
-- open bring and read my list: you have the following items on your list * apples and oranges
+- launch voice app and read my list:
+  - prompt:
+    - you have the following items on your list* apples and oranges
+    - here is your * list # For Google Action, card is not supported yet
 
 ---
 - test: Invoke intent adding items in different interaction
-- open bring: welcome
-- add cheese and wine: ok cheese and wine is on your list
-- read my list: you have the following items on your list * cheese and wine
-
+- launch voice app
+- add cheese and wine: 
+  - prompt:
+    - ok cheese and wine is on your list
+    - cheese wine
+    - done
+- read my list: 
+  - prompt:
+    - you have the following items on your list * cheese and wine
+    - here is your * list
