@@ -1,0 +1,32 @@
+
+#=====================================================================================================================
+#     ______    _ ____  ______        __  _
+#    / __/ /__ (_) / / /_  __/__ ___ / /_(_)__  ___ _
+#   _\ \/  '_// / / /   / / / -_|_-</ __/ / _ \/ _ `/
+#  /___/_/\_\/_/_/_/   /_/  \__/___/\__/_/_//_/\_, /
+#                                             /___/
+#
+# Created by Bespoken
+# Learn more at https://read.bespoken.io/end-to-end/getting-started/
+# >>> If you need assistance please chat with us here: https://apps.bespoken.io/dashboard (lower right-hand corner)
+#
+# Skill name: "Guess the Price by" Bespoken
+# Test scope: Simple end-to-end test script using the simulation feature by Amazon
+# Description: General test suite
+#=====================================================================================================================
+
+---
+configuration: # This is the configuration section, you can define your locale or the mocks here
+  locale: en-US
+  voiceId: Joey
+
+---
+- test: Invoke skill and stop.
+- launch voice app: how many persons are playing today # In the left part we have the utterance, in this case it's a reserved word
+- stop:
+    - prompt:
+        - Goodbye # A typical YAML sentence is composed by 2 parts separated by a colon
+        - okay I'll leave you be
+        - okay I'll go brainstorm more ways to help you
+        - sure I'll stop
+        - /^$/ # This regex is equivalent to empty response or prompt = ""
