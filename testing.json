@@ -1,13 +1,12 @@
 {
   "type": "e2e",
   "findReplace": {
-    "launch voice app": "open bring"
+    "launch voice app": "open guess the price"
   },
   "homophones": {
-    "bring": ["ring", "bing"],
-    "lettuce": ["let us"],
-    "figs": ["six","6","vicks"],
-    "carrots": ["carried"]
+    "is": ["as", "does", "it's"],
+    "two": ["to", "2"],
+    "contestant": ["contested"]
   },
   "trace": false,
   "jest": {
@@ -26,8 +25,7 @@
 },
   "virtualDeviceToken": {
     "alexa": {
-      "en-US": "<VIRTUAL_DEVICE_TOKEN_FROM_BESPOKEN_DASHBOARD>",
-      "de-DE": "<VIRTUAL_DEVICE_TOKEN_FROM_BESPOKEN_DASHBOARD>"
+      "en-US": "<VIRTUAL_DEVICE_TOKEN_FROM_BESPOKEN_DASHBOARD>"
       },
       "google": {
         "en-US": "<VIRTUAL_DEVICE_TOKEN_FROM_BESPOKEN_DASHBOARD>"

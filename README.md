@@ -24,7 +24,7 @@ npm install
 Within the project directory.
 
 ### __Get your Virtual Device Tokens__
-First, you need to get a token. A different token is needed per each locale you want to test. Our example works for the Alexa en-US and de-DE versions of the voice app; and for Google Assistant en-US, so you need 3 tokens. See [here](https://read.bespoken.io/end-to-end/setup/) for the instructions to get your tokens.
+First, you need to get a token. A different token is needed per each locale you want to test. Our example works for the Alexa and Google Assistant en-US version of the voice app. See [here](https://read.bespoken.io/end-to-end/setup/) for the instructions to get your tokens.
 
 ### __Configure your test scripts:__
 We have included our tokens on the `testing.json` file in this repo so you can run them and see them in action. You should add your tokens when creating your own test scripts.
@@ -48,41 +48,29 @@ You will notice there is a file named `testing.json` in the sample project. This
 {
   "type": "e2e",
   "findReplace": {
-    "launch voice app": "open bring"
+    "launch voice app": "open guess the price"
   },
   "homophones": {
     "lettuce": ["let us"],
-    "figs": ["six","6","vicks"]
+    "is": ["as", "does", "it's"],
+    "two": ["to", "2"],
+    "contestant": ["contested"]
   },
   "trace": false,
-  "jest": {
-    "silent": true
-  }
+  "silent": false
 }
 ```
-* __Find and replace__: This parameter will replace, within the test script files, the string `launch voice app` with `open bring`.
-* __Homophones__: Use this to specify words with a similar sound, for example, if you receive "let us" instead of "lettuce" or "six" instead of "figs".
+* __Find and replace__: This parameter will replace, within the test script files, the string `launch voice app` with `open guess the price` or `talk to guess the price`.
+* __Homophones__: Use this to specify words with a similar sound, for example, if you receive "let us" instead of "lettuce" or "to" instead of "two".
 * __Trace and silent__: Both parameters allows you to get extra information from the response payload, to enable set trace to true and silent to false.
 
 ## __Running tests__
-The test script files within de-DE folder have been created just for the German Bring Alexa skill, and the en-US ones work for both, Alexa and Google Assistant versions of the voice app.
+The test script files within the en-US folder work for both, Alexa and Google Assistant versions of the voice app.
 
-To run a particular file within the German scripts, enter:
-```
-bst test de-DE\my-test-file.yml
-```
-
-To run a directory containing many tests, provide the directory path instead:
-```
-bst test test-directory
-```
-
-That command will run all yml files that are contained within that directory.
-
-To run the en-US test script files you need to overwrite some parameters from the command line. For example, if you are an MS Windows user you can run a specific test file for the Alexa skill like this:
+To run the test script files you need to overwrite some parameters from the command line. For example, if you are an MS Windows user you can run a specific test file for the Alexa skill like this:
 
 ```BASH
-$ set "findReplace.launch voice app=open bring" & bst test en-US\launchRequest.e2e.yml --platform alexa
+$ set "findReplace.launch voice app=open guess the price" & bst test en-US\onePlayerGame.e2e.yml --platform alexa
 ```
 
 We are overwriting the `testing.json` `launch voice app` parameter with the value of the environment variable `findReplace.launch voice app`. Same happens when we use the `--platform alexa` flag.
@@ -90,7 +78,7 @@ We are overwriting the `testing.json` `launch voice app` parameter with the valu
 If we want to execute a test script for the Google Assistant version of the voice app we can write something like this:
 
 ```BASH
-$ set "findReplace.launch voice app=talk to bring shopping list" & bst test en-US\launchRequest.e2e.yml --platform google
+$ set "findReplace.launch voice app=talk to guess the price" & bst test en-US\onePlayerGame.e2e.yml --platform google
 ```
 
 Notice how the invocation name changes.
