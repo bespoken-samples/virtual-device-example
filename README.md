@@ -3,7 +3,7 @@ The Virtual Device Test Scripts are meant to make it easy for anyone to write au
 
 They use a simple YAML syntax for allowing anyone to write complex (but still readable) end-to-end tests.
 
-In this simple example, we are going to test the [Alexa](https://www.amazon.com/Juan-Perata-Guess-The-Price/dp/B0779F5ZDN) version of Guess The Price, one of our voice apps. It is also possible to use one single set of tests to QA an app created for both, Alexa and Google platforms. To know how to do it, read here.
+In this simple example, we are going to test the [Alexa](https://www.amazon.com/Juan-Perata-Guess-The-Price/dp/B0779F5ZDN) version of Guess The Price, one of our voice apps. It is also possible to use one single set of tests to QA an app created for both, Alexa and Google platforms. To know how to do it, read [here](https://github.com/bespoken-samples/virtual-device-example/tree/one-set-of-tests-for-alexa-google).
 
 ## __Setup__
 
