@@ -1,8 +1,5 @@
 {
   "type": "e2e",
-  "findReplace": {
-    "launch voice app": "open guess the price"
-  },
   "homophones": {
     "is": ["as", "does", "it's"],
     "two": ["to", "2"],
@@ -26,9 +23,6 @@
   "virtualDeviceToken": {
     "alexa": {
       "en-US": "<VIRTUAL_DEVICE_TOKEN_FROM_BESPOKEN_DASHBOARD>"
-      },
-      "google": {
-        "en-US": "<VIRTUAL_DEVICE_TOKEN_FROM_BESPOKEN_DASHBOARD>"
       }
     }
 }

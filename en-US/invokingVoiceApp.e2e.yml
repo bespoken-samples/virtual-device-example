@@ -10,8 +10,8 @@
 # Learn more at https://read.bespoken.io/end-to-end/getting-started/
 # >>> If you need assistance please chat with us here: https://apps.bespoken.io/dashboard (lower right-hand corner)
 #
-# Skill name: "Guess the Price by" Bespoken
-# Test scope: Simple end-to-end test script using the simulation feature by Amazon
+# Skill name: "Guess the Price" by Bespoken
+# Test scope: Simple end-to-end test script
 # Description: General test suite
 #=====================================================================================================================
 
@@ -22,7 +22,7 @@ configuration: # This is the configuration section, you can define your locale o
 
 ---
 - test: Invoke skill and stop.
-- launch voice app: how many persons are playing today # In the left part we have the utterance, in this case it's a reserved word
+- open guess the price: how many persons are playing today # In the left part we have the utterance, in this case it's a reserved word
 - stop:
     - prompt:
         - Goodbye # A typical YAML sentence is composed by 2 parts separated by a colon
