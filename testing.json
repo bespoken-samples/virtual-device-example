@@ -4,7 +4,7 @@
     "launch voice app": "open guess the price"
   },
   "homophones": {
-    "is": ["as", "does", "it's"],
+    "is": ["as", "does", "it's", "has"],
     "two": ["to", "2"],
     "contestant": ["contested"]
   },
