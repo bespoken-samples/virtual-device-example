@@ -25,10 +25,10 @@
 },
   "virtualDeviceToken": {
     "alexa": {
-      "en-US": "<VIRTUAL_DEVICE_TOKEN_FROM_BESPOKEN_DASHBOARD>"
+      "en-US": "<Get token at apps.bespoken.io>"
       },
       "google": {
-        "en-US": "<VIRTUAL_DEVICE_TOKEN_FROM_BESPOKEN_DASHBOARD>"
+        "en-US": "<Get token at apps.bespoken.io>"
       }
     }
 }
