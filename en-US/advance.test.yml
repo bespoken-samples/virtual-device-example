@@ -1,0 +1,26 @@
+---
+configuration:
+  locale: en-US
+  voiceId: Matthew
+
+---
+- test.only: Launch request, no further interaction
+- tags: NLUTest
+- <speak>talk to <phoneme alphabet="ipa" ph="gɛs ðə praɪs">guess the price</phoneme></speak>: welcome
+
+---
+- test: Launch request followed by a sequence of interactions
+- talk to INVOCATION_NAME
+- one:
+  - prompt:
+    - please tell us your name
+    - please tell us what is your name
+- jesus: let's start the game jesus your product is * guess the price
+- two hundred: You said 200 the actual price was * your score for that answer is * points *your next product is * guess the price
+- stop:
+    - prompt:
+        - Goodbye # This is how to test multiple valid responses
+        - okay I'll leave you be
+        - okay I'll go brainstorm more ways to help you
+        - sure I'll stop
+        - /^$/ # This regex is equivalent to empty response or prompt = ""

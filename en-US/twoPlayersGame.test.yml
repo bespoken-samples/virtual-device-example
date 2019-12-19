@@ -1,4 +1,3 @@
-
 #=====================================================================================================================
 #     ______    _ ____  ______        __  _
 #    / __/ /__ (_) / / /_  __/__ ___ / /_(_)__  ___ _
@@ -11,8 +10,8 @@
 # >>> If you need assistance please chat with us here: https://apps.bespoken.io/dashboard (lower right-hand corner)
 #
 # Action name: "Guess the Price" by Bespoken
-# Test scope: Invoke voice app and stop
-# Description: Verifying there are no issues with the invocation name
+# Test scope: Two players test scenario
+# Description: Invoke the voice app and play one round with two user
 #=====================================================================================================================
 
 ---
@@ -21,12 +20,11 @@ configuration: # This is the configuration section, you can define your locale o
   voiceId: en-US-Wavenet-D
 
 ---
-- test: Invoke skill and stop.
-- talk to guess the price: how many persons are playing today # In the left part we have the utterance, in this case it's a reserved word
-- stop:
-    - prompt:
-        - Goodbye # This is how to test multiple valid responses
-        - okay I'll leave you be
-        - okay I'll go brainstorm more ways to help you
-        - sure I'll stop
-        - /^$/ # This regex is equivalent to empty response or prompt = ""
+- test: Invoke skill, play once with two players and cancel.
+- talk to guess the price: how many persons are playing today
+- two: contestant one please tell us what is your name
+- jesus: contestant two please tell us what is your name
+- george: let's start the game jesus your product is * guess the price
+- one hundred and forty nine: you said 149 the actual price was * your score for that answer is * points now is george turn
+- forty three: now is jesus turn your next product is
+- stop

@@ -9,22 +9,22 @@
 # Learn more at https://read.bespoken.io/end-to-end/getting-started/
 # >>> If you need assistance please chat with us here: https://apps.bespoken.io/dashboard (lower right-hand corner)
 #
-# Skill name: "Guess the Price" by Bespoken
-# Test scope: Simple end-to-end test script
-# Description: General test suite
+# Action name: "Guess the Price" by Bespoken
+# Test scope: One player test scenario
+# Description: Invoke the voice app and play one game with one user
 #=====================================================================================================================
 
 ---
 configuration: # This is the configuration section, you can define your locale or the mocks here
   locale: en-US
-  voiceId: Joey
+  voiceId: en-US-Wavenet-D
 
 ---
 - test: Invoke skill, play once with one player and stop.
-- open guess the price: how many persons are playing today # In the left part we have the utterance, in this case it's a reserved word
+- talk to guess the price: how many persons are playing today # In the left part we have the utterance, in this case it's a reserved word
 - one:
   - prompt:
-    - please tell us your name # In the right part we have the expected result
+    - please tell us your name
     - please tell us what is your name
 - jesus: let's start the game jesus your product is * guess the price
 - two hundred: You said 200 the actual price was * your score for that answer is * points *your next product is * guess the price

@@ -5,3 +5,4 @@ package-lock.json
 test-report.html
 test_output
 bst-debug.log
+.env
